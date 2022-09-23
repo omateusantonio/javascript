@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código JS - Formatação de Strings</title>
+</head>
+<body>
+    <h1>Formatação de Strings e Números</h1>
+    <h2>Strings</h2>
+    <p>Se tivermos <code>var s = 'JavaScript'</code>, podemos formatar essa string com:
+    <ul>
+        <li><code>s.length</code>, para retornar quantos caracteres a string da variável tem;</li>
+        <li><code>s.toUpperCase()</code>, para que o texto da string passe todo para maiúsculo;</li>
+        <li><code>s.toLowerCase()</code>, para que o texto da string passe todo para minúsculo.</li>
+    </ul></p>
+
+    <h2>Números</h2>
+    <p>Se tivermos <code>var num = 1532.398</code>, podemos formatar a quantidade de casas decimais que são exibidas no número e também é possível substituir o ponto por vírgula.</p>
+    <ul>
+        <li>Para mudar a quantidade de casas, utiliza-se o comando <code>num.toFixed(2)</code>;</li>
+        <li>Já para mudar de ponto para vírgula, é utilizado o comando <code>replace('.', ',')</code> junto com <code>num.tofixed</code>, sendo que ele ficaria <code>num.toFixed(2).replace('.', ','). É importante observar que, neste caso, o dado tipo número passará a ser uma string e que, caso o comando replace() seja utilizado sozinho, ele não irá funcionar a não ser que o a variável seja convertida para uma string.</code></li>
+        <li>Também é possível fazer uma formatação automática para moeda com o comando <br><code>num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</code></li>
+    </ul>
+
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.write(`Olá, ${nome}, seu nome tem ${nome.length} letras <br>`)
+        document.write(`Seu nome todo em maiúsculas ficaria assim: ${nome.toUpperCase()}. Gostou? <br>`)
+        document.write(`Todo em minúsculas ele ficaria ${nome.toLowerCase()}`)
+    </script>
+</body>
+</html>

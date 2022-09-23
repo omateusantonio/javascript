@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código JS</title>
+</head>
+<body>
+    <h1>Tipos de dados</h1>
+    <p>Ao usar a concatenação (ou seja, o sinal de mais), o código não sabe diferenciar por si só se a variável é uma string ou um número.</p>
+    <p>Para que a diferenciação ocorra, é necessário determinar usando o comando <code>Number</code> ou então <code>parseInt</code> (para números inteiros) ou <code>parseFloat</code> (para todos os números reais). É opcional utilizar <code>Number(n)</code> antes dos comandos <code>parse</code>, sendo que ele ficaria <code>Number.parseInt</code>.</p>
+    <p>Para fazer a conversão de número para string é possível usar o comando <code>String(n)</code> ou então a maneira invertida <code>n.toString()</code></p>
+
+    <script>
+        var n1 = Number(window.prompt('Digite o primeiro número:'))
+        var n2 = Number(window.prompt('Digite o segundo número: '))
+        var soma = n1 + n2
+
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)
+    </script>
+</body>
+</html>
