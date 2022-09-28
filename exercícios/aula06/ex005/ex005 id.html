@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM - ID</title>
+    <style>
+        body {
+            background-color: rgb(68,125,199);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li {
+            padding: 5px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <section id="explicacao">
+        <h1>Selecionar elementos do DOM</h1>
+        <p>Usando o DOM, é possível selecionar elementos do código por:
+            <ul>
+                <li>Marca - <code>getElementsByTagName()</code>;
+                </li>
+                <li>ID - <code>getElementById();</code></li>
+                <li>Nome - <code>getElementsByName();</code></li>
+                <li>Classe - <code>getElementsByClassName();</code></li>
+                <li>Seletor (técnica moderna recomendada para CSS) - <code>querySelector()</code> ou <code>querySelectorAll()</code>;</li>
+            </ul>
+        </p>
+        <p>Ao usar seletores que não são únicos (todos os acima exceto Id), é <strong>NECESSÁRIO</strong> selecionar qual das tags se deseja modificar. Para isso, é necessário abrir colchetes para determinar qual das tags será selecionada. <br>Como por exemplo: <code>getElementsByTagName('p')[2]</code> selecionará a terceira tag &lt;p&gt; da página (a contagem inicia a partir do zero).</p>
+    </section>
+
+    <section id="exemplo">
+        <h1>Iniciando estudos DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+        <div id="msg">Clique em mim</div>
+    </section>
+
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p') [3]
+        var d = window.document.getElementById('msg')
+
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        // alternativa -> window.document.getElementById('msg').innerText = 'Estou aguardando'
+        
+        /* fazer d.innerText('Estou aguardando...') não funciona porque o sinal de igual (recebe) está indicando que o innerText da variável d receberá a string 'Estou aguardando' */
+
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM - Marca</title>
+    <style>
+        body {
+            background-color: rgb(68,125,199);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        li {
+            padding: 5px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <section id="explicacao">
+        <h1>Selecionar elementos do DOM</h1>
+        <p>Usando o DOM, é possível selecionar elementos do código por:
+            <ul>
+                <li>Marca - <code>getElementsByTagName()</code>;
+                </li>
+
+                <a href="ex005 id.html" rel="next" target="_self">
+                    <li>ID - <code>getElementById();</code></li>
+                </a>
+
+                <a href="ex005 name.html" rel="next" target="_self">
+                    <li>Nome - <code>getElementsByName();</code></li>
+                </a>
+
+                <a href="ex005 class.html" rel="next" target="_self">
+                    <li>Classe - <code>getElementsByClassName();</code></li>
+                </a>
+
+                <a href="ex005 seletor.html" rel="next" target="_self">
+                    <li>Seletor (técnica moderna recomendada para CSS) - <code>querySelector()</code> ou <code>querySelectorAll()</code>;</li>
+                </a>
+
+            </ul>
+        </p>
+        <p>Ao usar seletores que não são únicos (todos os acima exceto Id), é <strong>NECESSÁRIO</strong> selecionar qual das tags se deseja modificar. Para isso, é necessário abrir colchetes para determinar qual das tags será selecionada. <br>Como por exemplo: <code>getElementsByTagName('p')[2]</code> selecionará a terceira tag &lt;p&gt; da página (a contagem inicia a partir do zero).</p>
+    </section>
+
+    <section id="exemplo">
+        <h1>Iniciando estudos DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+        <div id="msg">Clique em mim</div>
+    </section>
+
+    <script>
+        // var corpo = document.body -> alterar do corpo
+        var p1 = document.getElementsByTagName('p') [4]
+
+        // corpo.style.background = 'black' -> alterar css do background da var corpo
+
+        window.document.write("Está escrito assim: " + p1.innerText)
+        /* no caso acima, se eu quisesse que fosse preservado o HTML interno da tag p, eu deveria usar p1.innerHTML */
+
+
+        // p1.style.color = 'blue' -> alterar css da fonte da var p1
+
+    </script>
+</body>
+</html>
